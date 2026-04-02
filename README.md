@@ -2,7 +2,7 @@
 
 This project is part of the 42 curriculum, created by **srosu**.
 
-## Objectifs
+## Goals
 
 Before starting larger projects, having a set of basic tools is essential. The first project in the curriculum is Libft, a custom C library containing commonly used functions that will be reused in future projects.
 
