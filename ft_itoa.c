@@ -3,14 +3,25 @@
 /*                                                       :::      ::::::::    */
 /*   ft_itoa.c                                         :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/04/02 00:37:49 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/02 01:38:30 by srosu           ###   ########.fr        */
+/*   Updated: 2026/04/14 14:05:17 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*convert(char *str, long nb, int len)
+{
+	while (nb > 0)
+	{
+		str[len - 1] = (nb % 10) + '0';
+		nb /= 10;
+		len--;
+	}
+	return (str);
+}
 
 char	*ft_itoa(int n)
 {
@@ -21,9 +32,7 @@ char	*ft_itoa(int n)
 	len = 0;
 	nb = n;
 	if (n <= 0)
-	{
 		len = 1;
-	}
 	while (nb != 0)
 	{
 		nb /= 10;
@@ -31,16 +40,9 @@ char	*ft_itoa(int n)
 	}
 	nb = n;
 	if (n < 0)
-	{
 		nb = -(long) n;
-	}
 	str = ft_calloc(len + 1, sizeof(*str));
-	while (nb > 0)
-	{
-		str[len - 1] = (nb % 10) + '0';
-		nb /= 10;
-		len--;
-	}
+	convert(str, nb, len);
 	if (n == 0)
 		str[0] = '0';
 	if (n < 0)
