@@ -3,16 +3,16 @@
 /*                                                       :::      ::::::::    */
 /*   ft_strtrim.c                                      :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/04/01 21:42:14 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/01 23:55:50 by srosu           ###   ########.fr        */
+/*   Updated: 2026/04/14 12:09:58 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_set(char c, char const *set)
+static int	is_set(char c, char const *set)
 {
 	while (*set)
 	{

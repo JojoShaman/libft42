@@ -3,16 +3,16 @@
 /*                                                       :::      ::::::::    */
 /*   ft_split.c                                        :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/04/01 23:57:29 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/02 00:36:34 by srosu           ###   ########.fr        */
+/*   Updated: 2026/04/14 12:10:43 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	cw;
