@@ -3,10 +3,10 @@
 /*                                                       :::      ::::::::    */
 /*   libft.h                                           :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
+/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/03/19 19:06:01 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/14 12:34:11 by srosu           ###   ########.fr        */
+/*   Updated: 2026/04/15 16:13:18 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <bsd/string.h>
+# include <string.h>
 # include <stdint.h>
 # include <ctype.h>
 

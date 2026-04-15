@@ -35,31 +35,55 @@ static int	count_words(char const *s, char c)
 	return (cw);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**free_all(char **tab, int i)
+{
+	while (i >= 0)
+		free(tab[i--]);
+	free(tab);
+	return (NULL);
+}
+
+static int	word_len(char const *s, int start, char c)
+{
+	int		wl;
+
+	wl = 0;
+	while (s[start + wl] != c && s[start + wl] != '\0')
+		wl++;
+	return (wl);
+}
+
+static	char	**fill_tab(char const *s, int start, char c, char **tab)
 {
 	int		i;
-	int		start;
-	int		len;
-	char	**tab;
 
 	i = 0;
-	start = 0;
-	if (!s)
-		return (NULL);
-	tab = ft_calloc((count_words(s, c) + 1), sizeof(*tab));
 	while (s[start])
 	{
 		while (s[start] == c)
 			start++;
 		if (!s[start])
 			break ;
-		len = 0;
-		while (s[start + len] != c && s[start + len] != '\0')
-			len++;
-		tab[i] = ft_substr(s, start, len);
+		tab[i] = ft_substr(s, start, word_len(s, start, c));
+		if (!tab[i])
+			return (free_all(tab, i));
+		start += word_len(s, start, c);
 		i++;
-		start += len;
 	}
 	tab[i] = NULL;
 	return (tab);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		start;
+	char	**tab;
+
+	start = 0;
+	if (!s)
+		return (NULL);
+	tab = malloc((count_words(s, c) + 1) * sizeof(*tab));
+	if (!tab)
+		return (NULL);
+	return (fill_tab(s, start, c, tab));
 }

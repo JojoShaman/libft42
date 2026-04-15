@@ -20,11 +20,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	newstr = ft_calloc((ft_strlen(s) + 1), sizeof(*newstr));
+	newstr = malloc((ft_strlen(s) + 1) * sizeof(*newstr));
+	if (!newstr)
+		return (NULL);
 	while (s[i])
 	{
 		newstr[i] = f(i, s[i]);
 		i++;
 	}
+	newstr[i] = '\0';
 	return (newstr);
 }

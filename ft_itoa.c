@@ -23,6 +23,19 @@ static char	*convert(char *str, long nb, int len)
 	return (str);
 }
 
+static int	nb_len(long nb)
+{
+	int		len;
+
+	len = 0;
+	while (nb != 0)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
+}
+
 char	*ft_itoa(int n)
 {
 	int		len;
@@ -33,16 +46,14 @@ char	*ft_itoa(int n)
 	nb = n;
 	if (n <= 0)
 		len = 1;
-	while (nb != 0)
-	{
-		nb /= 10;
-		len++;
-	}
-	nb = n;
+	len += nb_len(nb);
 	if (n < 0)
 		nb = -(long) n;
-	str = ft_calloc(len + 1, sizeof(*str));
+	str = malloc((len + 1) * sizeof(*str));
+	if (!str)
+		return (NULL);
 	convert(str, nb, len);
+	str[len] = '\0';
 	if (n == 0)
 		str[0] = '0';
 	if (n < 0)
