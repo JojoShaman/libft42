@@ -3,10 +3,10 @@
 /*                                                       :::      ::::::::    */
 /*   ft_memchr.c                                       :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/04/01 18:51:28 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/01 18:57:31 by srosu           ###   ########.fr        */
+/*   Created: 2026/04/16 14:54:08 by srosu            #+#    #+#              */
+/*   Updated: 2026/04/16 14:54:09 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == (unsigned char) c)
-			return ((void *)&str[i]);
+			return ((void *) & str[i]);
 		i++;
 	}
 	return (NULL);

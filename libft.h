@@ -3,10 +3,10 @@
 /*                                                       :::      ::::::::    */
 /*   libft.h                                           :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/03/19 19:06:01 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/15 16:13:18 by srosu           ###   ########.fr        */
+/*   Created: 2026/04/16 14:51:22 by srosu            #+#    #+#              */
+/*   Updated: 2026/04/16 14:51:25 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void * (*f)(void *), void (*del)(void *));
 #endif

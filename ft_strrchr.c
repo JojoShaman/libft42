@@ -3,10 +3,10 @@
 /*                                                       :::      ::::::::    */
 /*   ft_strrchr.c                                      :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/04/01 18:26:36 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/01 18:30:27 by srosu           ###   ########.fr        */
+/*   Created: 2026/04/16 14:53:52 by srosu            #+#    #+#              */
+/*   Updated: 2026/04/16 14:53:53 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strrchr(const char *s, int c)
 	char	*str;
 
 	i = 0;
-	str = (char *)s;
+	str = (char *) s;
 	while (str[i])
 		i++;
-	if ((unsigned char)c == '\0')
+	if ((unsigned char) c == '\0')
 		return (&str[i]);
 	while (i >= 0)
 	{

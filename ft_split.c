@@ -5,8 +5,8 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/04/01 23:57:29 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/14 12:10:43 by srosu           ###   ########.fr        */
+/*   Created: 2026/04/16 14:56:00 by srosu            #+#    #+#              */
+/*   Updated: 2026/04/16 14:56:00 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	**free_all(char **tab, int i)
 
 static int	word_len(char const *s, int start, char c)
 {
-	int		wl;
+	int	wl;
 
 	wl = 0;
 	while (s[start + wl] != c && s[start + wl] != '\0')
@@ -53,9 +53,9 @@ static int	word_len(char const *s, int start, char c)
 	return (wl);
 }
 
-static	char	**fill_tab(char const *s, int start, char c, char **tab)
+static char	**fill_tab(char const *s, int start, char c, char **tab)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (s[start])

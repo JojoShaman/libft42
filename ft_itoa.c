@@ -5,8 +5,8 @@
 /*                                                   +:+ +:+         +:+      */
 /*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/04/02 00:37:49 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/14 14:05:17 by srosu           ###   ########.fr        */
+/*   Created: 2026/04/16 14:56:09 by srosu            #+#    #+#              */
+/*   Updated: 2026/04/16 14:56:09 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static char	*convert(char *str, long nb, int len)
 
 static int	nb_len(long nb)
 {
-	int		len;
+	int	len;
 
 	len = 0;
 	while (nb != 0)
