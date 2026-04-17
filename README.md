@@ -1,7 +1,9 @@
+**keywords**: `Unix logic`
 **skills**: `Imperative programming - Rigor - Algorithms & AI`
+
 # LIBFT
 
-This project is part of the 42 curriculum, created by **srosu**.
+*This project has been created as part of the 42 curriculum by **srosu**.*
 
 ## Goals
 
