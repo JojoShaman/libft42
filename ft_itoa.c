@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char	*convert(char *str, long nb, int len)
+static void	*convert(char *str, long nb, int len)
 {
 	while (nb > 0)
 	{
