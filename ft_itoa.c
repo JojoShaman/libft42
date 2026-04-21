@@ -20,7 +20,6 @@ static void	*convert(char *str, long nb, int len)
 		nb /= 10;
 		len--;
 	}
-	return (str);
 }
 
 static int	nb_len(long nb)
