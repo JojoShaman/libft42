@@ -14,6 +14,6 @@ clean:
 	rm -rf ${OBJS}
 fclean: clean
 	rm -rf ${NAME}
-re: all
+re: fclean all
 
 .PHONY: all clean fclean re
